@@ -138,6 +138,8 @@ Let's suppose I told you that there is a protein sequence somewhere within this 
 What is our protein, then?
 - (this is what it does, biologically)
 - http://viralzone.expasy.org/all_by_species/3955.html
+Alternative method:
+   -restrict by subsequence
 
 ### Specialized BLASTs (at phagesdb+NCBI)
 #### Comparing two sequences (bl2seq)
