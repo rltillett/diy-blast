@@ -1,7 +1,6 @@
-# DIY BIOINFORMATICS
-# BLAST & FRIENDS
+# DIY Bioinformatics - BLAST & friends
 
-## Tools suggested:
+## Some tools suggested:
 - PC or mac (assume windows)
 - a web browser that can use NCBI web tools (pretty much anything)
 - Atom text editor (portable download for classroom PCs)
@@ -28,12 +27,12 @@ BLAST is a set of tools used to identify imperfect matches (similarity) between 
    - Comparing the novel sequence to known protein sequences to hypothesize gene function
    - Comparing a partial sequence to whole genome sequences
 - Finding homologs to interesting genes in your favorite species
-- Specialized BLASTs
+- Specialized BLASTs exist too
    - Make gene-specific primers for PCR (Primer-BLAST)
    - Screen a sequence for vectors (VecScreen)
    - Comparing two sequences (bl2seq)
 
-### BLAST Example: “What does this gene do?”
+### BLAST Example: a novel phage sequence
 
 Obtain the appletree2 sequence
 - Go to http://phagesdb.org
@@ -42,12 +41,12 @@ Obtain the appletree2 sequence
 - Scroll down and click on the link for “Yes: Download fasta file“
 - Open the downloaded sequence in a text editor and/or ape
 
-### Performing BLAST at phagesdb
+#### Performing BLAST at phagesdb
 - starting from the appletree2 page
 - click locally blast this genome
 - click BLAST button
 
-### The Results Page
+#### The Results Page (phagesdb)
 - Query information
 - The Graphic Summary
    - position indicates aligned region
@@ -64,14 +63,15 @@ Obtain the appletree2 sequence
    - Bit scores are the “raw” scores for the pairwise alignment
    - e-values are an estimate of how likely such alignment would be (vs. pure chance)
 
-### Performing BLAST at NCBI
+
+#### Performing BLAST at NCBI
 - Go to http://www.ncbi.nlm.nih.gov/
 - On the right, under Popular Resources, click BLAST to go to the BLAST home page http://blast.ncbi.nlm.nih.gov/
 - Choose the program nucleotide blast http://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&BLAST_PROGRAMS=megaBlast&PAGE_TYPE=BlastSearch&SHOW_DEFAULTS=on&LINK_LOC=blasthome
 - Paste in the sequence of the gene of interest and click BLAST button
 - Results page: similar to phagesdb? How are they different?
 
-### The Results Page
+#### The Results Page (ncbi)
 - Query information
 - The Graphic Summary
    - position indicates aligned region
@@ -90,13 +90,11 @@ Obtain the appletree2 sequence
    - Bit scores are the “raw” scores for the pairwise alignment
    - e-values are an estimate of how likely such alignment would be (vs. pure chance)
 
-### Modifying BLAST parameters (at phagesdb)
-- changing to BLASTX
-   - click “go to protein BLAST” link
-   - change algorithm to blastx. Why?
-   - are these results different? Quite so.
-- filtering for low complexity. Any changes?
-- When is the translation table important to us?
+
+   ### more on e-values
+   - ncbi e-value videos
+   	- video 1: e-values https://youtu.be/nO0wJgZRZJs
+   	- video 2: 3 FAQs https://youtu.be/Z7ek7UoP7Bg
 
 ### Modifying BLAST parameters (at ncbi)
 - Scroll back to top of page and click “Edit and Resubmit”
@@ -112,11 +110,11 @@ Obtain the appletree2 sequence
 - Restrict by species
 - Search genomes only
 
-### Comparing nucleotide sequence to proteins (blastx)
+### Comparing a partly unknown nucleotide sequence to proteins (blastx)
 Obtain the gumball phase sequence
 - Go to http://phagesdb.org
 - In the “search phagesdb” text box type "gumball" and click search
-- click on the 1st search result to bring up the appletree2 record
+- click on the 1st search result to bring up the gumball record
 - Scroll down and click on the link for “Yes: Download fasta file“
 - Open the downloaded sequence in a text editor and/or ape
 
@@ -141,7 +139,7 @@ What is our protein, then?
 - (this is what it does, biologically)
 - http://viralzone.expasy.org/all_by_species/3955.html
 
-### Specialized BLASTs (at NCBI)
+### Specialized BLASTs (at phagesdb+NCBI)
 #### Comparing two sequences (bl2seq)
 - Appletree2 vs. one of its close relatives
    - Return to appletree2 page at phagesdb
@@ -152,7 +150,20 @@ What is our protein, then?
 - “align two sequences”
 
 
-### more on e-values
-- ncbi e-value videos
-	- video 1: e-values https://youtu.be/nO0wJgZRZJs
-	- video 2: 3 FAQs https://youtu.be/Z7ek7UoP7Bg
+### Another BLAST Example: “What relatives does a gene have in a model organism?”
+
+Obtain this example sequence
+- Go to http://www.ncbi.nlm.nih.gov/
+- In the “all databases” text box type “VvCBF4” and click search
+- In the Entrez page click “Nucleotide” to get to the 1 record of this sequence
+- Click the word FASTA in the upper left
+- If something went wrong, go here http://www.ncbi.nlm.nih.gov/nuccore/DQ497624
+- Choose the program nucleotide blast
+- Paste in the sequence of the gene of interest and click BLAST button
+- Results page: anything curious about these results?
+Modifying BLAST parameters (by genomes, by species)
+- Let’s change the type of nucleotide blast used
+   - Click edit and resubmit
+   - In Program selection, change to blastn
+- Searching genomes only
+- Restrict by species (type the word "Arabidopsis")
