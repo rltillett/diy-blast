@@ -1,5 +1,5 @@
 # diy-blast
 Prepared slides to introduce BLAST concepts and applications are located at
-<diy-blast/slides.pdf>
+[slides.pdf](./diy-blast/slides.pdf) or [slides.pptx](./diy-blast/slides.pptx)
 Hands-on workshop walkthrough located at
-<diy-blast/diy_blast.md>
+[diy_blast.md](./diy-blast/diy_blast.md)
